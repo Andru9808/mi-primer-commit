@@ -1,0 +1,707 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+/*
+padding: 0;: Esta instrucción establece el valor de relleno (padding) en 0 para todos los elementos. El relleno es el espacio entre el contenido de un elemento y su borde.
+margin: 0;: Esta instrucción establece el valor de margen (margin) en 0 para todos los elementos. El margen es el espacio alrededor de un elemento.
+box-sizing: border-box;: Esta instrucción establece el modelo de caja (box-sizing) en "border-box" para todos los elementos. El modelo de caja determina cómo se calcula el ancho y alto de un elemento, teniendo en cuenta el relleno y el borde.
+font-family: sans-serif;: Esta instrucción establece la fuente (font-family) en "sans-serif" para todos los elementos de texto. "Sans-serif" es una categoría de fuentes sin remates.
+list-style: none;: Esta instrucción establece el estilo de lista (list-style) en "none" para todos los elementos de lista. Esto elimina los marcadores o numeración predeterminados de las listas.
+text-decoration: none;: Esta instrucción establece la decoración de texto (text-decoration) en "none" para todos los elementos de texto. Esto elimina cualquier subrayado o línea a través del texto.
+scroll-behavior: smooth;: Esta instrucción establece el comportamiento de desplazamiento (scroll-behavior) en "smooth" para el elemento HTML. Esto hace que el desplazamiento sea suave y animado cuando se utiliza un enlace de anclaje.
+*/
+:root{
+    --bg-color:#191919;
+    --secont-bg-color:#101010;
+    --third-bg-color:#202020;
+    --main-color:#e9204f;
+    --text-color:#fff;
+    --second-color:#e4e4e4;
+    --other-color:#c6c9d8bf;
+    --h1-font:7rem;
+    --h2-font:3.5rem;
+    --p-font:1.1rem;
+}
+/*
+Estas propiedades se definen en la regla :root en CSS y se utilizan para establecer variables personalizadas (también conocidas como variables CSS o variables personalizadas) que pueden ser utilizadas en todo el documento CSS. Estas variables se pueden utilizar para definir valores que se repiten en diferentes partes del código CSS, lo que facilita su mantenimiento y modificación.
+
+Aquí está el significado de cada una de las propiedades definidas en :root:
+
+1. --bg-color: #191919;: Esta variable define el color de fondo principal (bg-color) con el valor #191919. Puede ser utilizado en diferentes partes del código CSS para establecer un color de fondo consistente en todo el documento.
+2. --second-bg-color: #101010;: Esta variable define un segundo color de fondo (second-bg-color) con el valor #101010. Puede ser utilizado para establecer un color de fondo alternativo en diferentes elementos o secciones del documento.
+3. --third-bg-color: #202020;: Esta variable define un tercer color de fondo (third-bg-color) con el valor #202020. Al igual que la variable anterior, puede ser utilizada para establecer un color de fondo adicional en diferentes partes del documento.
+4. --main-color: #e9204f;: Esta variable define el color principal (main-color) con el valor #e9204f. Puede ser utilizado para establecer un color de acento o destacado en diferentes elementos o secciones del documento.
+5. --text-color: #fff;: Esta variable define el color de texto principal (text-color) con el valor #fff, que representa el color blanco. Puede ser utilizado para establecer un color de texto consistente en todo el documento.
+6. --second-color: #e4e4e4;: Esta variable define un segundo color (second-color) con el valor #e4e4e4. Puede ser utilizado para establecer un color adicional en diferentes partes del documento, como en elementos de borde o de fondo.
+7. --other-color: #c6c9d8bf;: Esta variable define otro color (other-color) con el valor #c6c9d8bf. Puede ser utilizado para establecer un color adicional en diferentes partes del documento, según sea necesario.
+8. --h1-font: 7rem;: Esta variable define el tamaño de fuente para los encabezados de nivel 1 (h1-font) con el valor 7rem. Puede ser utilizado para establecer un tamaño de fuente personalizado para los encabezados de nivel 1 en todo el documento.
+9. --h2-font: 3.5rem;: Esta variable define el tamaño de fuente para los encabezados de nivel 2 (h2-font) con el valor 3.5rem. Puede ser utilizado para establecer un tamaño de fuente personalizado para los encabezados de nivel 2 en todo el documento.
+10. --p-font: 1.1rem;: Esta variable define el tamaño de fuente para los párrafos (p-font) con el valor 1.1rem. Puede ser utilizado para establecer un tamaño de fuente personalizado para los párrafos en todo el documento.
+
+Estas variables pueden ser utilizadas en diferentes partes del código CSS utilizando la sintaxis var(--nombre-de-la-variable). Por ejemplo, para utilizar la variable --bg-color como color de fondo en un elemento, se puede utilizar la propiedad background-color: var(--bg-color);.
+
+El uso de variables CSS personalizadas proporciona flexibilidad y facilita la personalización y el mantenimiento del código CSS.
+*/
+
+
+
+body{
+    color:var(--text-color);
+    background-color: var(--bg-color);
+   
+}
+/*Las propiedades CSS que se proporcionan en el código son las siguientes:
+
+1. `color: var(--text-color);`: Esta propiedad establece el color de texto (`color`) utilizando la variable CSS personalizada `--text-color`. El valor de la variable se utilizará como el color de texto para el elemento al que se aplica esta regla CSS.
+2. `background-color: var(--bg-color);`: Esta propiedad establece el color de fondo (`background-color`) utilizando la variable CSS personalizada `--bg-color`. El valor de la variable se utilizará como el color de fondo para el elemento al que se aplica esta regla CSS.
+
+Estas propiedades se utilizan para aplicar estilos de color al elemento `body` de un documento HTML. La variable `--text-color` se utiliza para establecer el color de texto y la variable `--bg-color` se utiliza para establecer el color de fondo del elemento `body`.
+
+Es importante tener en cuenta que estas variables personalizadas deben ser definidas previamente en el código CSS, ya sea en la regla `:root` o en otro lugar del archivo CSS, para que puedan ser utilizadas en las propiedades de estilo.*/
+
+
+
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 30px 10%;
+    border-bottom: 1px solid transparent;
+    transition: all ease .50s;
+}
+/*Las propiedades CSS que se proporcionan en el código son las siguientes:
+
+1. position: fixed;: Esta propiedad establece la posición del elemento como fija. El elemento se mantiene en la misma posición incluso cuando se realiza un desplazamiento en la página.
+2. top: 0;: Esta propiedad establece la distancia desde la parte superior del elemento hasta el borde superior del contenedor padre. En este caso, se establece en 0, lo que coloca el elemento en la parte superior del contenedor.
+3. right: 0;: Esta propiedad establece la distancia desde el borde derecho del elemento hasta el borde derecho del contenedor padre. En este caso, se establece en 0, lo que coloca el elemento en el lado derecho del contenedor.
+4. z-index: 1000;: Esta propiedad establece el índice de apilamiento del elemento. El valor de 1000 indica que el elemento estará en un nivel superior en la pila de elementos en comparación con otros elementos con un índice de apilamiento inferior. Esto significa que el elemento estará por encima de otros elementos en la página.
+5. width: 100%;: Esta propiedad establece el ancho del elemento al 100% del ancho del contenedor padre. Esto hace que el elemento ocupe todo el ancho disponible.
+6. display: flex;: Esta propiedad establece el elemento como un contenedor flexible. Esto permite que los elementos secundarios dentro del elemento se distribuyan y alineen de manera flexible.
+7. align-items: center;: Esta propiedad establece la alineación vertical de los elementos secundarios dentro del contenedor flexible. En este caso, los elementos secundarios se alinearán verticalmente en el centro.
+8. justify-content: space-between;: Esta propiedad establece la distribución horizontal de los elementos secundarios dentro del contenedor flexible. En este caso, los elementos secundarios se distribuirán de manera uniforme con un espacio entre ellos.
+9. background: transparent;: Esta propiedad establece el color de fondo del elemento como transparente. Esto hace que el fondo del elemento sea transparente y muestre el contenido detrás de él.
+10. padding: 30px 10%;: Esta propiedad establece el relleno (padding) del elemento. El valor de 30px establece el relleno superior e inferior en 30 píxeles, y el valor de 10% establece el relleno izquierdo y derecho en un 10% del ancho del elemento.
+11. border-bottom: 1px solid transparent;: Esta propiedad establece un borde inferior de 1 píxel con un color transparente. Esto crea un borde inferior invisible en el elemento.
+12. transition: all ease .50s;: Esta propiedad establece una transición suave para todas las propiedades animables del elemento. La duración de la transición es de 0.5 segundos.
+
+Estas propiedades se utilizan para estilizar un encabezado (header) en una página web. El encabezado se posiciona de forma fija en la parte superior derecha de la ventana del navegador, tiene un ancho del 100% del contenedor padre, utiliza un diseño flexible con alineación vertical y distribución horizontal, tiene un fondo transparente, un relleno de 30 píxeles en la parte superior e inferior y un relleno del 10% del ancho del elemento en los lados izquierdo y derecho, y tiene un borde inferior invisible. Además, se aplica una transición suave a todas las propiedades animables del elemento.*/
+
+.logo{
+    font-family: 'Permanent Marker', cursive; 
+    color: var(--main-color);
+    font-size: 3rem;
+  }
+  /*
+    Las propiedades CSS que se proporcionan en el código son las siguientes:
+
+    font-family: 'Permanent Marker', cursive;: Esta propiedad establece la fuente (font-family) del texto utilizando la fuente "Permanent Marker" y la categoría de fuentes cursivas (cursive). Esto significa que el texto dentro de los elementos con la clase "logo" se mostrará con la fuente "Permanent Marker" o una fuente cursiva similar si la fuente especificada no está disponible.
+    color: var(--main-color);: Esta propiedad establece el color del texto (color) utilizando la variable CSS personalizada --main-color. El valor de la variable se utilizará como el color del texto para los elementos con la clase "logo".
+    font-size: 3rem;: Esta propiedad establece el tamaño de fuente (font-size) en 3 rem para los elementos con la clase "logo". El tamaño de fuente se medirá en relación con el tamaño de fuente predeterminado del documento.
+    Estas propiedades se utilizan para aplicar estilos específicos a los elementos con la clase "logo". Estos estilos incluyen la fuente, el color del texto y el tamaño de fuente. La fuente se establece como "Permanent Marker" o una fuente cursiva similar, el color del texto se establece utilizando una variable CSS personalizada llamada --main-color, y el tamaño de fuente se establece en 3 rem.
+
+  */
+  #menu{
+    display: flex;  
+  
+  }
+  /*
+    display: flex;: Esta propiedad establece el valor de visualización (display) del elemento con el id menu como flex. Esto convierte al elemento en un contenedor flexible que permite el diseño de elementos hijos en una línea horizontal.
+
+    La propiedad display: flex; se utiliza para aplicar el modelo de diseño flexible (Flexbox) al elemento con el id menu. Esto permite que los elementos hijos dentro de menu se distribuyan y alineen de manera flexible en una línea horizontal.
+  */
+  #menu a{
+      color: var(--second-color);
+      font-size: var(--p-font);
+      font-family: 'Permanent Marker';
+      font-weight: 400;
+      letter-spacing: 1px;
+      margin: 0 40px;
+      transition: all ease .40s;
+  }
+  /*Las propiedades CSS que se proporcionan en el código son las siguientes:
+
+    1. `color: var(--second-color);`: Esta propiedad establece el color del texto (`color`) utilizando la variable CSS personalizada `--second-color`. El valor de la variable se utilizará como el color del texto para los elementos `a` dentro del elemento con el id `menu`.
+    2. `font-size: var(--p-font);`: Esta propiedad establece el tamaño de fuente (`font-size`) utilizando la variable CSS personalizada `--p-font`. El valor de la variable se utilizará como el tamaño de fuente para los elementos `a` dentro del elemento con el id `menu`.
+    3. `font-family: 'Vina Sans';`: Esta propiedad establece la fuente (`font-family`) como "Vina Sans" para los elementos `a` dentro del elemento con el id `menu`. "Vina Sans" es el nombre de una fuente específica que se utilizará para el texto.
+    4. `font-weight: 400;`: Esta propiedad establece el grosor de la fuente (`font-weight`) en 400 para los elementos `a` dentro del elemento con el id `menu`. Un valor de 400 generalmente se considera normal o regular.
+    5. `letter-spacing: 1px;`: Esta propiedad establece la separación entre letras (`letter-spacing`) en 1 píxel para los elementos `a` dentro del elemento con el id `menu`. Esto aumentará ligeramente el espacio entre las letras del texto.
+    6. `margin: 0 40px;`: Esta propiedad establece los márgenes (`margin`) en 0 píxeles en la parte superior e inferior y 40 píxeles en los lados izquierdo y derecho para los elementos `a` dentro del elemento con el id `menu`. Esto creará un margen de 40 píxeles en los lados izquierdo y derecho del texto.
+    7. `transition: all ease .40s;`: Esta propiedad establece una transición suave (`transition`) para todas las propiedades animables del elemento `a` dentro del elemento con el id `menu`. La duración de la transición es de 0.4 segundos.
+
+    Estas propiedades se utilizan para aplicar estilos específicos a los elementos `a` dentro del elemento con el id `menu`. Estos estilos incluyen el color del texto, el tamaño de fuente, la fuente, el grosor de la fuente, la separación entre letras, los márgenes y una transición suave.*/
+  #menu a:hover{
+      color: var(--main-color);
+  }
+  /*
+    color: var(--main-color);: Esta propiedad establece el color del texto (color) utilizando la variable CSS personalizada --main-color. El valor de la variable se utilizará como el color del texto para los elementos a dentro del elemento con el id menu cuando se encuentren en estado de "hover" (cuando el cursor se sitúa sobre ellos).
+
+    Esta propiedad se utiliza para cambiar el color del texto de los elementos a dentro del elemento con el id menu cuando se produce el evento de "hover" (cursor sobre ellos). El color del texto se establece utilizando una variable CSS personalizada llamada --main-color.
+  */
+  #menu-icon{
+      font-size: 42px;
+      color: var(--text-color);
+      z-index: 10001;
+      cursor: pointer;
+      display: none;
+  }
+  /*
+    font-size: 42px;: Esta propiedad establece el tamaño de fuente (font-size) en 42 píxeles para el elemento con el id menu-icon. Esto determinará el tamaño del texto o icono dentro del elemento.
+
+    color: var(--text-color);: Esta propiedad establece el color del texto (color) utilizando una variable CSS personalizada llamada --text-color. El valor de la variable se utilizará como el color del texto para el elemento con el id menu-icon.
+
+    z-index: 10001;: Esta propiedad establece el orden de apilamiento (z-index) en 10001 para el elemento con el id menu-icon. Esto determina el orden en el que los elementos se apilan unos encima de otros, con valores más altos que aparecen encima de valores más bajos.
+
+    cursor: pointer;: Esta propiedad establece el estilo del cursor (cursor) como un puntero para el elemento con el id menu-icon. Esto cambia la apariencia del cursor cuando se coloca sobre el elemento para indicar que se puede hacer clic en él.
+
+    display: none;: Esta propiedad establece la propiedad de visualización (display) en none para el elemento con el id menu-icon. Esto significa que el elemento no se mostrará en la página.
+
+    Estas propiedades se utilizan para aplicar estilos al elemento con el id menu-icon. Se especifican el tamaño de fuente, el color del texto, el orden de apilamiento, el estilo del cursor y la propiedad de visualización para este elemento.
+
+
+  */
+
+
+section{
+    padding: 120px 10%;
+}
+.home{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(../img/persona4.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.hero-text{
+    color: var(--second-color);
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 15px;
+    word-spacing: 10px;
+}
+.hero-text h1{
+    font-family: 'Dosis', sans-serif;
+    font-size: var(--h1-font);
+    color: var(--text-color);
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+.hero-text h4{
+    color: var(--second-color);
+    font-size: 25px;
+    font-weight: 600;
+    word-spacing: 15px;
+    margin-bottom: 3.5rem;
+}
+.btn{
+    display: inline-block;
+    padding: 16px 45px;
+    background: var(--main-color);
+    color: var(--text-color);
+    font-size: var(--p-font);
+    font-weight: 600;
+    border: 2px solid var(--main-color);
+    transition: all ease .50s;
+}
+.btn:hover{
+    transform: translateX(5px);
+    background: transparent;
+}
+header.sticky{
+    padding: 15px 11%;
+    background: #000;
+    border-bottom: 1px solid #4e5055;
+}
+.about{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+}
+.about-text h2{
+    font-family: 'Dosis', sans-serif;
+    font-size: var(--h2-font);
+    color: var(--text-color);
+    font-weight: 800;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+.about-text h5{
+    font-size: 22px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+.about-text span{
+    color: var(--main-color);
+}
+.about-text p{
+    color: var(--other-color);
+    font-size: var(--p-font);
+    line-height: 30px;
+    margin-bottom: 3rem;
+
+}
+.about{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+}
+.about-text h2{
+    font-family: 'Dosis', sans-serif;
+    font-size: var(--h2-font);
+    color: var(--text-color);
+    font-weight: 800;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+.about-text h5{
+    font-size: 22px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+.about-text span{
+    color: var(--main-color);
+}
+.about-text p{
+    color: var(--other-color);
+    font-size: var(--p-font);
+    line-height: 30px;
+    margin-bottom: 3rem;
+
+}
+.service{
+    background-color: var(--secont-bg-color);
+}
+.service-text{
+    text-align: center;
+}
+.service-text h2{
+    font-family: 'Dosis', sans-serif;
+    font-size: var(--h2-font);
+    color: var(--text-color);
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+.service-text h4{
+    font-size: 22px;
+    font-weight: 500;
+
+}
+.service-item{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 100px;
+}
+.service-box{
+    padding: 45px 30px;
+    background-color: var(--bg-color);
+    border-radius: 0.8rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition:  all ease 0.50s;
+}
+.service-box:hover{
+    transform:  translateY(-8px);
+    border:  1px solid #4e5055;
+}
+.service i{
+    font-size: 50px;
+    color: var(--main-color);
+    margin-bottom: 10px;
+
+}
+.service h3{
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+.service p{
+    color: var(--other-color);
+    font-size: var(--p-font);
+    line-height: 30px;
+    margin-bottom: 1.5rem;
+}
+.s-btn{
+    display: inline-block;
+    padding: 9px 24px;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 500;
+    border: 2px solid var(--main-color);
+    border-radius: 2rem;
+    transition:  all ease 0.50s;
+}
+.s-btn:hover{
+    transform: scale(1.1);
+    background-color: transparent;
+
+}
+
+
+.portafolio{
+    background-color: var(--third-bg-color);
+    text-align: center;
+}
+.portafolio h1{
+    font-family: 'Dosis', sans-serif;
+    font-size: var(--h2-font);
+    color: var(--text-color);
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.portafolio h3{
+    font-family: 'Dosis', sans-serif;
+    font-size: 25px;
+    color: var(--text-color);
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.portafolio p{
+    color: var(--other-color);
+    font-size: var(--p-font);
+    line-height: 30px;
+    margin-bottom: 1.5rem;
+}
+.portafolio-item{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 100px;
+}
+.portafolio-box{
+    padding: 45px 30px;
+    width: 350px;
+    background-color: var(--bg-color);
+    border-radius: 0.8rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition:  all ease 0.50s;
+}
+.portafolio-box:hover{
+    transform:  translateY(-8px);
+    border:  1px solid #4e5055;
+}
+
+
+
+.blog{
+
+    text-align: center;
+}
+.blog h1{
+    font-family: 'Dosis', sans-serif;
+    font-size: var(--h2-font);
+    color: var(--text-color);
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.blog-item h3{
+    text-align: center;
+    font-size: 2em;
+    color: #000;
+    padding: 10px;
+  }
+  .blog-item p{
+   text-align: justify; 
+   padding: 10px 30px;
+   font-family: 'Open Sans', sans-serif;
+   font-size: 14px;
+   color: #C8C8C8;
+   line-height: 18px;
+  }
+  
+.blog-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+} 
+.blog-contenido {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+
+
+.blog-item{
+  width: 400px;
+  background: white;
+  border-radius: 4px;
+  transition: all 0.3s ease; 
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  height: 65vh;
+
+
+}
+.blog-item:hover {
+    transform: translate(10px, -10px);
+    box-shadow: 0px 20px 50px #D9DBDF;
+}
+
+.blog-item img{
+    width: 100%;
+}
+.blog-datos{
+    padding: 0px 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contact{
+    background-color: var(--third-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    gap: 50px;
+}
+.contact-left{
+    flex:1;
+    text-align: center;
+    display: flex;
+    gap: 25px;
+}
+.contact-right{
+    flex:3;
+}
+.contact i{
+    font-size: 120px;
+    color: var(--main-color);
+    margin-bottom: 15px;
+    opacity: 0.5;
+    transition:  all ease 0.40s;
+}
+.contact i:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.contact h4{
+    font-size: 27px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.contact h2{
+    font-family: 'Dosis', sans-serif;
+    font-size: var(--h2-font);
+    color: var(--text-color);
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+.contact a{
+    display: inline-block;
+    color: var(--main-color);
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    border-bottom: 2px solid var(--main-color);
+    padding: 3px 0;
+    transition: all ease 0.40s;
+}
+.contact a:hover{
+    transform: translateY(-5px);
+    color: var(--text-color);
+    border-bottom: 2px solid var(--text-color);
+}
+.contact p{
+    color: var(--other-color);
+    font-size: var(--p-font);
+    line-height: 30px;
+}
+.sroll-btn{
+    position: fixed;
+    right: 2.2rem;
+    bottom: 2.2rem;
+    color: var(--text-color);
+    background-color: var(--main-color);
+    font-size: 23px;
+    padding: 9px;
+    border-radius: 0.8rem;
+
+
+}
+
+
+
+
+
+/* media queries */
+@media(max-width:1600px){
+    section{
+        padding: 50px 15%;
+    }
+    header{
+        padding: 14px 4%;
+    }
+    header.sticky{
+        padding: 8px 4%;
+    }
+
+}
+@media (max-width:1200px){
+    section{
+        padding: 50px 10%;
+    }
+    .home{
+        min-height: 90vh;
+    }
+    #menu a{
+        margin:  0 20px;
+    }
+
+    :root{
+        --h1-font:5rem;
+        --h2-font:3.1rem;
+        --p-font:1rem;  
+    }
+    .logo{
+        font-size: 2rem;
+      }
+      .about{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        text-align: center;
+    }
+    .about img{
+        width: 80%;
+    }
+    .service-item{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .contact{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+@media (max-width:1060px){
+    section{
+        padding: 50px 5%;
+    }
+    :root{
+        --h1-font:4rem;
+        --h2-font:2.5rem;
+        --p-font:0.8rem;  
+    }
+
+    .about{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        text-align: center;
+    }
+    .about img{
+        width: 80%;
+    }
+    .service-item{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .contact{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .contact i{
+        font-size: 80px;
+    }
+}
+@media (max-width:870px){
+    #menu-icon{
+        display: block;
+    }
+    #menu{
+        position: absolute;
+        top: -800px;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: #000;
+        padding: 20px 0;
+        text-align: left;
+        transition:  all ease 0.50s;
+    }
+    #menu a{
+        display: block;
+        font-size: 22px;
+        padding: 12px 0;
+    }
+    #menu.open{
+        top:100%
+    }
+}
+
+/*
+Las propiedades CSS proporcionadas en el código son parte de las reglas de los media queries, que se utilizan para aplicar estilos específicos en función del tamaño de la pantalla o del dispositivo en el que se visualiza la página web. A continuación, se explica qué hacen estas propiedades en cada media query:
+
+@media (max-width: 1600px): Este media query se aplica cuando el ancho de la pantalla es como máximo 1600 píxeles. Dentro de este media query, se definen las siguientes reglas:
+
+
+@media (max-width: 1200px): Este media query se aplica cuando el ancho de la pantalla es como máximo 1200 píxeles. Dentro de este media query, se definen las siguientes reglas:
+
+#menu a: Se establece un margen (margin) de 0 en la parte superior e inferior y 20 píxeles en los lados para los elementos a dentro del elemento con el id menu.
+:root: Se definen variables CSS personalizadas para el tamaño de fuente de los elementos h1, h2 y p.
+.logo: Se establece un tamaño de fuente (font-size) de 2 rem para los elementos con la clase logo.
+@media (max-width: 1060px): Este media query se aplica cuando el ancho de la pantalla es como máximo 1060 píxeles. Dentro de este media query, se definen las siguientes reglas:
+
+section: Se establece un relleno de 50 píxeles en la parte superior e inferior y un 5% en los lados para los elementos section.
+:root: Se actualizan las variables CSS personalizadas para el tamaño de fuente de los elementos h1, h2 y p.
+@media (max-width: 870px): Este media query se aplica cuando el ancho de la pantalla es como máximo 870 píxeles. Dentro de este media query, se definen las siguientes reglas:
+
+#menu-icon: Se establece la propiedad de visualización (display) en block para el elemento con el id menu-icon, lo que hace que se muestre en la página.
+#menu: Se establece la posición (position) en absolute y se ajustan las propiedades top, right y left para posicionar el elemento menu en la parte superior de la página. Además, se establece la propiedad de visualización en flex y se cambia la dirección de flexión (flex-direction) a column para que los elementos se muestren en una columna en lugar de una fila. También se establece un color de fondo (background-color), un relleno (padding), un alineamiento de texto (text-align) y una transición (transition) para el elemento menu.
+#menu a: Se establece la propiedad de visualización en block y se cambia el tamaño de fuente (font-size) y el relleno (padding) para los elementos a dentro del elemento menu.
+#menu.open: Si el elemento menu también tiene la clase open, se ajusta la propiedad top para mostrar el menú completamente en la página.
+Estas propiedades se utilizan para aplicar estilos específicos en diferentes tamaños de pantalla, lo que permite una experiencia de usuario más adaptativa y responsiva.
+*/

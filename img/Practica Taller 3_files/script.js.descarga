@@ -1,0 +1,46 @@
+const menuIconEl=document.querySelector('#menu-icon');
+const menuEl=document.querySelector('#menu');
+const headerEl = document.querySelector("header");
+
+menuIconEl.addEventListener("click",()=>{
+    menuIconEl.classList.toggle('bx-x');
+    menuEl.classList.toggle('open');
+})
+window.onscroll = () =>{
+    menuIconEl.classList.remove('bx-x');
+    menuEl.classList.remove('open');
+}
+
+addEventListener("scroll",()=>{
+   headerEl.classList.toggle("sticky",window.scrollY>200)
+})
+/*
+El código JavaScript proporcionado realiza las siguientes acciones:
+
+1.const menuIconEl=document.querySelector('#menu-icon');: Esta línea de código selecciona el elemento con el idmenu-icon y lo almacena en la variablemenuIconEl.
+
+2.const menuEl=document.querySelector('#menu');: Esta línea de código selecciona el elemento con el idmenu y lo almacena en la variablemenuEl.
+
+3.const headerEl = document.querySelector("header");: Esta línea de código selecciona el elementoheader y lo almacena en la variableheaderEl.
+
+4.menuIconEl.addEventListener("click",()=>{...}): Esta parte del código agrega un evento de clic (click) al elementomenuIconEl. Cuando se hace clic en el elementomenuIconEl, se ejecuta la función de flecha (()=>{...}) que contiene el siguiente código:
+   -menuIconEl.classList.toggle('bx-x');: Esta línea de código agrega o elimina la clasebx-x al elementomenuIconEl. Esto permite alternar la apariencia del elementomenuIconEl cuando se hace clic en él.
+   -menuEl.classList.toggle('open');: Esta línea de código agrega o elimina la claseopen al elementomenuEl. Al igual que la línea anterior, esto permite alternar la apariencia del elementomenuEl cuando se hace clic en el elementomenuIconEl.
+
+5.window.onscroll = () => {...}: Esta parte del código establece un evento de desplazamiento (onscroll) en la ventana (window). Cuando se produce un desplazamiento en la página, se ejecuta la función de flecha (() => {...}) que contiene el siguiente código:
+   -menuIconEl.classList.remove('bx-x');: Esta línea de código elimina la clasebx-x del elementomenuIconEl. Esto asegura que la apariencia del elementomenuIconEl se restablezca cuando se produce un desplazamiento en la página.
+   -menuEl.classList.remove('open');: Esta línea de código elimina la claseopen del elementomenuEl. Al igual que la línea anterior, esto asegura que la apariencia del elementomenuEl se restablezca cuando se produce un desplazamiento en la página.
+
+6.addEventListener("scroll",()=>{...}): Esta parte del código agrega un evento de desplazamiento (scroll) al documento. Cuando se produce un desplazamiento en la página, se ejecuta la función de flecha (()=>{...}) que contiene el siguiente código:
+   -headerEl.classList.toggle("sticky",window.scrollY>200): Esta línea de código agrega o elimina la clasesticky al elementoheaderEl en función de la posición de desplazamiento vertical (window.scrollY). Si la posición de desplazamiento es mayor que 200 píxeles, se agrega la clasesticky; de lo contrario, se elimina la clasesticky. Esto permite cambiar la apariencia del elementoheaderEl cuando se desplaza la página.
+
+En resumen, este código JavaScript agrega interactividad y efectos visuales a la página. Cuando se hace clic en el elementomenuIconEl, se muestra u oculta el menú al alternar la claseopen en el elementomenuEl y la clasebx-x en el elementomenuIconEl. Además, cuando se produce un desplazamiento en la página, se asegura de que el menú esté oculto y se agrega o elimina la clasesticky en el elementoheaderEl según la posición de desplazamiento.
+
+Espero que esta respuesta sea útil. Si tienes alguna otra pregunta, ¡no dudes en hacerla!
+
+*/
+
+
+
+
+
